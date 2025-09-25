@@ -54,7 +54,7 @@ const SingleNews = ({ newsItem }) => {
     };
 
     return (
-        <div className='bg-[#232323a1] p-4 rounded-lg shadow-md shadow-[#028094]/30 hover:shadow-lg transition-shadow duration-300 ease-in-out flex justify-between items-start'>
+        <div className='bg-[#141414a1] p-4 rounded-lg shadow-md shadow-[#028094]/30 hover:shadow-lg transition-shadow duration-300 ease-in-out flex justify-between items-start'>
             <div>
                 <div>
                     <div className='flex items-center gap-2 mb-2'>

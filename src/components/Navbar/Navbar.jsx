@@ -17,23 +17,43 @@ const Navbar = () => {
 
     const { open, setOpen, user } = useAuthContext();
 
-    const handlePreference = (e) => {
+    const handlePreference = async (e) => {
         const inputValue = e.target.value;
         // console.log(inputValue);
+        if (!user?.email) {
+            setOpen(true);
+            return;
+        }
+
+        const preference = {
+            preference: inputValue,
+            email: user?.email
+        }
+
         if (inputValue.trim() !== '') {
-            axios.post('http://localhost:5000/api/preferences', { preference: inputValue })
+            await axios.post('http://localhost:5000/api/preferences', preference)
+                .then(res => {
+                    // console.log(res.data);
+                    if (res.data.acknowledged) {
+                        toast.success('Preference added successfully');
+                    }
+                })
+                .catch(err => {
+                    // console.log(err.message);
+                    toast.error(err.message);
+                })
         }
     }
 
     const handleSignOut = () => {
         signOut(auth)
-        .then(()=>{
-            toast.success('Sign out successful');
-        })
-        .catch((error)=>{
-            console.log(error.message);
-            toast.error(error.message);
-        })
+            .then(() => {
+                toast.success('Sign out successful');
+            })
+            .catch((error) => {
+                // console.log(error.message);
+                toast.error(error.message);
+            })
     }
 
 

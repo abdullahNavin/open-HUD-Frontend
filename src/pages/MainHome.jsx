@@ -23,7 +23,7 @@ const MainHome = () => {
         <Navbar />
         <Feed />
         <Signin />
-        <Toaster />
+        <Toaster richColors position="top-center" />
       </div>
     </div>
   );

@@ -44,6 +44,7 @@ const Signin = () => {
             <Modal
                 title="Sign in to your account"
                 open={open}
+                width={400}
                 onOk={() => setOpen(false)}
                 onCancel={() => setOpen(false)}
                 okButtonProps={{ style: { display: 'none' } }}
