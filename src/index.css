@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+.textShadow{
+    text-shadow: 0 0px 10px #0ff;
+}
+.boxShadow:hover{
+    box-shadow: 0 0px 15px #0ff;
+    cursor: pointer;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
