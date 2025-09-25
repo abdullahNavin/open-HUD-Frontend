@@ -5,6 +5,8 @@ import NewsFeed from '../components/NewsFeed';
 import Feed from '../components/Feed/Feed';
 import Signin from '../Authentication/Signin';
 import { Toaster } from 'sonner';
+import SettingDrawer from '../components/Navbar/SettingDrawer';
+import BookMarkDrawer from '../components/Navbar/BookMarkDrawer';
 
 const MainHome = () => {
   return (
@@ -23,6 +25,8 @@ const MainHome = () => {
         <Navbar />
         <Feed />
         <Signin />
+        <SettingDrawer/>
+        <BookMarkDrawer/>
         <Toaster richColors position="top-center" />
       </div>
     </div>

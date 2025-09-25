@@ -7,6 +7,8 @@ export const AuthContext = createContext(null);
 const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState('')
     const [open, setOpen] = useState(false);
+    const [settingOpen, setSettingOpen] = useState(false);
+    const [bookMarkOpen, setBookMarkOpen] = useState(false);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -19,7 +21,7 @@ const AuthContextProvider = ({ children }) => {
 
     }, [auth])
 
-    const info = {user, open, setOpen};
+    const info = {user, open, setOpen, settingOpen, setSettingOpen, bookMarkOpen, setBookMarkOpen};
 
     return (
         <AuthContext.Provider value={info}>

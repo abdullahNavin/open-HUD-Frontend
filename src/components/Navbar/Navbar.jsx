@@ -15,7 +15,7 @@ import { toast } from 'sonner';
 const Navbar = () => {
     // bg-[#0280945d] [#028094]
 
-    const { open, setOpen, user } = useAuthContext();
+    const { open, setOpen, user, setSettingOpen, setBookMarkOpen } = useAuthContext();
 
     const handlePreference = async (e) => {
         const inputValue = e.target.value;
@@ -84,8 +84,8 @@ const Navbar = () => {
                     </div>
 
                     <div className='flex gap-6 items-center'>
-                        <PiBookmarkBold className='text-2xl text-gray-300 cursor-pointer hover:text-[#028094] duration-300 ease-in-out' />
-                        <BsGear className='text-2xl text-gray-300 cursor-pointer hover:text-[#028094] duration-300 ease-in-out' />
+                        <PiBookmarkBold onClick={() => setBookMarkOpen(true)} className='text-2xl text-gray-300 cursor-pointer hover:text-[#028094] duration-300 ease-in-out' />
+                        <BsGear onClick={() => setSettingOpen(true)} className='text-2xl text-gray-300 cursor-pointer hover:text-[#028094] duration-300 ease-in-out' />
 
                         {user?.email ?
                             <button onClick={handleSignOut} className='py-1 px-3.5 rounded bg-gray-300 text-black hover:bg-[#0ff] boxShadow'>Sign out</button>

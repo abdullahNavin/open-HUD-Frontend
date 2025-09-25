@@ -12,7 +12,7 @@ const Feed = () => {
                     <div className='h-full mt-[30%]'>
                         <div className='text-[#00ffffc1] text-center'>
                             <h1 className='text-xl mb-2'>No preferences yet.</h1>
-                            <p>Use the search bar at the top to customize your preferences.</p>
+                            <p>Use the input field at the top to customize your preferences.</p>
                         </div>
                     </div>
                 </div>

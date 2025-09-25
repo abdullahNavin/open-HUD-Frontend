@@ -27,7 +27,7 @@ const NewsFeed = () => {
             } else {
                 container.scrollTop += 1; // scroll speed (px)
             }
-        }, 50); 
+        }, 50);
 
         // Pause when user hovers
         container.addEventListener("mouseenter", () => clearInterval(scrollInterval));
